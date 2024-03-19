@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+<h2>  {% block title %}Order{% endblock title %}  </h2>
+
+{% endblock header %}
+
+{% block content %}
+
+<div class="grid-container">
+
+  <h2>  ORDERING PORTAL </h2>
+
+  <div class="alert2">{{result1}}</div>
+  <div class="alert1">{{result2}}</div>
+
+
+  <div class="div1">
+
+    <form action="http://127.0.0.1:5000/order" method="POST">
+      <label for="fname">Patron ID</label>
+      <input type="text" name="ID" required />
+      <label for="Drink">Drink</label>
+      {% include("drinks.html") %}
+      <input type="submit" value="submit" />
+    </form>
+
+  </div>
+
+</div>
+{% endblock content %}

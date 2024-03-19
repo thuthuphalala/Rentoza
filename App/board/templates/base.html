@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html lang="en">
+            <head>
+                  <title>MOONSHINE BAR - {% block title %}{% endblock title %}</title>
+                  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+                  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            </head>
+    <body>
+          {% include("_navigation.html") %}
+          <div class="banner"></div>
+                <div class="glow"><h1>MOONSHINE BAR PATRON MANAGEMENT SYSTEM</h1></h1></div>
+                  <section>
+                        <header>
+                            {% block header %}{% endblock header %}
+                        </header>
+                        <main>
+                            {% block content %}<p>No messages.</p>{% endblock content %}
+                        <main>
+                    </section>
+      </body>
+  </html>

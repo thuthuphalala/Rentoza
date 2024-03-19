@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div class="grid-container">
+
+   <h2>SEARCH PATRON</h2>
+
+   <div class="div1">
+
+      <form action="http://127.0.0.1:5000" method="POST">
+         <label for="fname">Patron ID</label>
+         <input type="text" name="ID" required />
+         <input type="submit" value="submit" />
+      </form>
+
+   </div>
+   <table>
+      <tr>
+         <th> ID </th>
+         <th> Name </th>
+         <th> Gender </th>
+         <th> Weight </th>
+         <th> Drinks </th>
+         <th> BAC </th>
+         <th> LastDrink </th>
+         <th> Threshold </th>
+      </tr>
+      {% for value1 in result2 %}
+      {% if value1[7] == "True" %}
+      <tr class="invalid">
+         <td> {{ value1[0] }} </td>
+         <td> {{ value1[1] }} </td>
+         <td> {{ value1[2] }} </td>
+         <td> {{ value1[3] }} </td>
+         <td> {{ value1[4] }} </td>
+         <td> {{ value1[5] }} </td>
+         <td> {{ value1[6] }} </td>
+         <td> {{ value1[7] }} </td>
+      </tr>
+      {% else %}
+      <tr>
+         <td> {{ value1[0] }} </td>
+         <td> {{ value1[1] }} </td>
+         <td> {{ value1[2] }} </td>
+         <td> {{ value1[3] }} </td>
+         <td> {{ value1[4] }} </td>
+         <td> {{ value1[5] }} </td>
+         <td> {{ value1[6] }} </td>
+         <td> {{ value1[7] }} </td>
+      </tr>
+      {% endif %}
+
+      {% endfor %}
+   </table>
+
+   <hr>
+
+   <h2>PATRON BAC READINGS</h2>
+
+   <table>
+      <tr>
+         <th> ID </th>
+         <th> Name </th>
+         <th> Gender </th>
+         <th> Weight </th>
+         <th> Drinks </th>
+         <th> BAC </th>
+         <th> LastDrink </th>
+         <th> Threshold </th>
+      </tr>
+      {% for value in result %}
+      {% if value[7] == "True" %}
+      <tr  class="invalid">
+         <td> {{ value[0] }} </td>
+         <td> {{ value[1] }} </td>
+         <td> {{ value[2] }} </td>
+         <td> {{ value[3] }} </td>
+         <td> {{ value[4] }} </td>
+         <td> {{ value[5] }} </td>
+         <td> {{ value[6] }} </td>
+         <td> {{ value[7] }} </td>
+      </tr>
+      {% else %}
+      <tr>
+         <td> {{ value[0] }} </td>
+         <td> {{ value[1] }} </td>
+         <td> {{ value[2] }} </td>
+         <td> {{ value[3] }} </td>
+         <td> {{ value[4] }} </td>
+         <td> {{ value[5] }} </td>
+         <td> {{ value[6] }} </td>
+         <td> {{ value[7] }} </td>
+      </tr>
+      {% endif %}
+
+      {% endfor %}
+
+   </table>
+   <hr>
+   <hr>
+   <div class="footer">
+      <p>MOONSHINE BAR PATRON MANAGEMENT SYSTEM</p>
+    </div>
+</div>
+{% endblock content %}

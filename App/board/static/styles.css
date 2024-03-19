@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+ }
+  
+  a,
+  a:visited {
+    color: #007bff;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  tr:hover {background-color: coral;}
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  th {
+    background-color: #a97575;
+    color: rgb(0, 0, 0);
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  th {
+    height: 70px;
+  }
+
+  /* Navigation bar */
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #a20000;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: rgb(255, 250, 250);
+}
+
+
+/* PICTURE BANNER */
+
+body, html {
+  height: 100%;
+}
+
+.banner {
+  background-image: url("banner2.png");
+  background-size: cover;
+  background-position: center;
+  height: 60%;
+  
+}
+
+/* NEON TEXT */
+
+.glow {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #b70000, 0 0 40px #b70000, 0 0 50px #b70000, 0 0 60px #b70000, 0 0 70px #b70000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #b70000, 0 0 40px #b70000, 0 0 50px #b70000, 0 0 60px #b70000, 0 0 70px #b70000, 0 0 80px #b70000;
+  }
+}
+
+.grid-container {
+  display: block;
+  height: auto;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* Forms */
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #8d0606;
+}
+
+.div1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.alert1{
+  font-size: 20px;
+  color: #000000;
+  background-color: #ff0000;
+  
+}
+
+.alert2{
+  font-size: 20px;
+  color: #000000;
+  background-color: #04ff00;
+}
+
+/*High BAC alert*/
+@-webkit-keyframes invalid {
+  from { background-color: red; }
+  to { background-color: inherit; }
+}
+@-moz-keyframes invalid {
+  from { background-color: red; }
+  to { background-color: inherit; }
+}
+@-o-keyframes invalid {
+  from { background-color: red; }
+  to { background-color: inherit; }
+}
+@keyframes invalid {
+  from { background-color: red; }
+  to { background-color: inherit; }
+}
+.invalid {
+  -webkit-animation: invalid 1s infinite; /* Safari 4+ */
+  -moz-animation:    invalid 1s infinite; /* Fx 5+ */
+  -o-animation:      invalid 1s infinite; /* Opera 12+ */
+  animation:         invalid 1s infinite; /* IE 10+ */
+}
+
+tr {
+    padding: 1em;
+}
